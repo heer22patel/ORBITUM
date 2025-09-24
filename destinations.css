@@ -1,0 +1,748 @@
+:root {
+    --dark-bg: #0A0C18;
+    --primary-text: #E0E0E0;
+    --secondary-text: #B0B0B0;
+    --accent-blue: white;
+    /* Bright blue for accents */
+    --node-glow: white;
+    --line-color: white;
+    --panel-card-bg: #1A1F2C;
+    /* Darker, solid background for the card */
+    --button-primary-bg: #007bff;
+    /* Standard blue button */
+    --button-primary-hover: #0056b3;
+    --status-active-bg: #28a745;
+    --status-upcoming-bg: #ffc107;
+    --status-planned-bg: #17a2b8;
+    --status-conceptual-bg: #6c757d;
+    --status-ongoing-bg: #007bff;
+    --header-footer-bg: #1A1F2C;
+    /* Consistent background for header/footer */
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--primary-text);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+:root {
+    --color-primary: #3b74e6;
+    --color-secondary: #5d93ff;
+    --color-text-dark: #1E252F;
+    --color-text-light: #A7A9AC;
+    --color-background-dark: #1E252F;
+    --color-background-light: #e8f0f7;
+    --color-card-background: #2A303A;
+    --color-card-background-light: #2d3748;
+    --color-cta-blue: #3182ce;
+    --color-cta-blue-hover: #2c5282;
+    --color-status-active: #4299e1;
+    --color-status-completed: #48bb78;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*
+    ====================
+    Header & Navigation
+    ====================
+*/
+.header {
+    background-color: #1a202c;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    min-height: 60px;
+}
+
+.header__logo {
+    color: white;
+    font-size: 23px;
+    letter-spacing: -1.5px;
+    font-weight: 500;
+}
+
+.primary-nav {
+    transition: left 0.3s ease-in-out;
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 40px;
+}
+
+.nav__link {
+    color: white;
+    transition: color 0.4s;
+    position: relative;
+    font-size: 14px;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    bottom: -5px;
+    left: 0;
+    transition: width 0.4s ease;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    color: var(--color-primary);
+}
+
+.nav__link:hover::after,
+.nav__link:focus::after {
+    width: 100%;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 27px;
+    height: 20px;
+}
+
+.bar {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    opacity: 0.8;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+.main2 h2 {
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.main2 p {
+    font-size: 18px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* --- Galactic Map Container (Keep as is) --- */
+.galactic-map-container {
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+
+
+}
+
+/* Connection Lines (SVG) (Keep as is) */
+.connection-lines {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.connection-lines line {
+    stroke: var(--line-color);
+    stroke-width: 1px;
+    transition: stroke 0.3s ease;
+}
+
+/* Destination Nodes (Keep the non-flickering version) */
+.destination-node {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent-blue);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+}
+
+.destination-node::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px var(--node-glow);
+    transition: box-shadow 0.3s ease;
+}
+
+.destination-node::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--accent-blue);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.destination-node:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.destination-node:hover::before {
+    box-shadow: 0 0 25px 5px var(--node-glow);
+}
+
+.destination-node:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+.destination-node .label {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 6;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.destination-node:hover .label {
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px);
+}
+
+/* Positioning for specific nodes (Adjust these values as before) */
+/* ... all your node positions from previous code ... */
+#node-moon-1 {
+    top: 15%;
+    left: 75%;
+}
+
+#node-moon-2 {
+    top: 10%;
+    left: 30%;
+}
+
+#node-mars-1 {
+    top: 35%;
+    left: 40%;
+}
+
+#node-mars-2 {
+    top: 25%;
+    left: 60%;
+}
+
+#node-europa {
+    top: 28%;
+    left: 85%;
+}
+
+#node-titan {
+    top: 55%;
+    left: 85%;
+}
+
+#node-andromeda {
+    top: 60%;
+    left: 10%;
+}
+
+#node-kepler {
+    top: 75%;
+    left: 80%;
+}
+
+#node-outpost-a {
+    top: 45%;
+    left: 15%;
+}
+
+#node-colony-x {
+    top: 65%;
+    left: 40%;
+}
+
+#node-gas-giant-station {
+    top: 50%;
+    left: 60%;
+}
+
+#node-nebula-gate {
+    top: 35%;
+    left: 70%;
+}
+
+#node-dark-matter-lab {
+    top: 85%;
+    left: 55%;
+}
+
+#node-nova-prime {
+    top: 20%;
+    left: 50%;
+}
+
+#node-asteroid-mine {
+    top: 70%;
+    left: 30%;
+}
+
+#node-comet-station {
+    top: 40%;
+    left: 25%;
+}
+
+#node-tess {
+    top: 50%;
+    left: 25%;
+}
+
+
+/* --- Info Panel (Same as previous "TESS Mission" card style) --- */
+.info-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 400px;
+    height: 450px;
+    background-color: var(--panel-card-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    opacity: 0;
+    /* Hidden by default */
+    pointer-events: none;
+    /* Make it unclickable when hidden */
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 20;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.info-panel.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.panel-image-header {
+    position: relative;
+    width: 100%;
+    height: 238px;
+    background-color: var(--dark-bg);
+    overflow: hidden;
+}
+
+.panel-image-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.status-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--status-ongoing-bg);
+    /* Default, overridden by JS */
+}
+
+.panel-content {
+    padding: 10px 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.info-panel h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 5px;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.info-panel p#panel-overview {
+    font-size: 0.95rem;
+    color: var(--secondary-text);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.mission-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.mission-details p {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    margin: 0;
+}
+
+.mission-details span {
+    font-weight: 500;
+    color: var(--primary-text);
+}
+
+#learn-more-btn {
+    align-self: flex-start;
+    padding: 10px 25px;
+    background-color: var(--button-primary-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+#learn-more-btn:hover {
+    background-color: var(--button-primary-hover);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+.intro-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--primary-text);
+    z-index: 10;
+    pointer-events: none;
+    /* Allows clicks to pass through to the nodes */
+    width: 80%;
+    max-width: 600px;
+}
+
+.intro-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    text-shadow: 0 0 15px var(--accent-blue);
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 300;
+    color: var(--secondary-text);
+}
+
+.footer {
+    background-color: #1a202c;
+    /* Dark background */
+    color: #cbd5e0;
+    /* Light gray text color */
+    padding: 70px 20px 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+}
+
+/* Brand Section */
+.footer-brand {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.footer-tagline {
+    font-size: 14px;
+    color: #a0aec0;
+}
+
+/* Column Headings */
+.footer-column h3 {
+    color: #4299e1;
+    /* Blue accent for headings */
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-column h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #4299e1;
+    margin-top: 8px;
+}
+
+/* Remove underline only for social icons heading */
+.footer-column-social h3::after {
+    display: none;
+}
+
+/* Links List */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 10px 0;
+}
+
+.footer-column ul li a {
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+    /* Brighter white on hover */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    color: #ffffff;
+    /* White icon color */
+}
+
+.social-link i {
+    font-size: 18px;
+}
+
+/* Base colors for each social icon */
+.social-link.facebook-link {
+    background-color: #3b5998;
+}
+
+.social-link.twitter-link {
+    background-color: #1da1f2;
+}
+
+.social-link.instagram-link {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-link.whatsapp-link {
+    background-color: #25d366;
+}
+
+/* Hover effects */
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+/* Horizontal Divider */
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: #4a5568;
+    margin: 60px auto 30px;
+}
+
+/* Copyright Section */
+.copyright {
+    text-align: center;
+    color: #718096;
+    /* Muted gray */
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    .primary-nav {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        background-color: var(--color-text-dark);
+        width: 100%;
+        padding: 10px 0 25px;
+    }
+
+    .primary-nav.open {
+        left: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .hamburger-menu.open .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger-menu.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.open .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .connection-lines {
+        margin-left: 9px;
+    }
+
+    .info-panel {
+        width: 90%;
+        /* Use a percentage for fluid width on smaller screens */
+        height: auto;
+        /* Let the height adjust to the content */
+        max-height: 90vh;
+        /* Prevent it from taking up the full viewport height */
+        transform: translate(-50%, -50%) scale(1);
+        /* Ensure it's not scaled down by default */
+        overflow-y: auto;
+        /* Add vertical scroll if content is too long */
+    }
+
+    .info-panel.visible {
+        transform: translate(-50%, -50%) scale(1);
+        /* No scaling on mobile to keep it at full size */
+    }
+
+    .panel-image-header {
+        height: 150px;
+        /* Reduce image header height for mobile */
+    }
+
+    .panel-content {
+        padding: 10px 15px;
+        /* Reduce padding for a more compact layout */
+    }
+
+    .info-panel h2 {
+        font-size: 1.4rem;
+        /* Reduce font size for readability */
+    }
+
+    .info-panel p#panel-overview {
+        font-size: 0.9rem;
+        /* Slightly smaller font size */
+    }
+
+    .status-tag {
+        top: 10px;
+        /* Adjust tag position */
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 0.75rem;
+        /* Smaller font for the tag */
+    }
+
+    #learn-more-btn {
+        padding: 8px 20px;
+        /* Make the button smaller */
+        font-size: 0.9rem;
+    }
+}

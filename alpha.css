@@ -1,0 +1,332 @@
+/* General & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #0d1117;
+    color: #e6edf3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #e6edf3;
+    background-image: url('abg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #ffd700;
+    color: #0d1117;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e6be00;
+    transform: translateY(-3px);
+}
+
+/* Main Sections */
+section {
+    padding: 100px 0;
+}
+
+.mission-section,
+.features-section,
+.challenges-section,
+.cta-section {
+    background-color: #161b22;
+    border-bottom: 1px solid #30363d;
+}
+
+/* Features Section - Card Layout */
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.feature-item {
+    flex-basis: 30%;
+    text-align: center;
+}
+
+.card {
+    background-color: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Challenges Section */
+.challenges-section {
+    padding: 80px 0;
+}
+
+.timeline-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 50px;
+    position: relative;
+    padding: 0 50px;
+}
+
+.timeline-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #30363d;
+    transform: translateY(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 30%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-item::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: #ffd700;
+    border-radius: 50%;
+    border: 2px solid #161b22;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.timeline-year {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-info {
+    font-size: 1rem;
+    color: #b0b0b0;
+    position: relative;
+    z-index: 2;
+    padding-top: 20px;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.secondary-cta {
+    margin-top: 20px;
+    background-color: transparent;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.secondary-cta:hover {
+    background-color: #ffd700;
+    color: #0d1117;
+}
+
+
+
+.copyright {
+    font-size: 0.9rem;
+    color: #8b949e;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .features-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .timeline-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        /* Aligns items to the left */
+        gap: 50px;
+        padding: 0 20px;
+        /* Adjust padding for smaller screens */
+        position: relative;
+    }
+
+    .timeline-wrapper::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        top: 0;
+        left: 20px;
+        /* Aligns the line with the left side of the items */
+        background-color: #30363d;
+        transform: none;
+        /* Reset transform for vertical line */
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        /* Already correct */
+        align-items: flex-start;
+        /* Aligns the item content to the left */
+        text-align: left;
+        /* Aligns the text to the left */
+        padding-left: 40px;
+        /* Creates space for the vertical line and dot */
+        position: relative;
+    }
+
+    .timeline-item::before {
+        left: -8px;
+        top: 20px;
+        /* Adjusts the position of the dot relative to the item */
+        transform: translateY(-50%);
+        /* Correct vertical alignment */
+    }
+
+    .timeline-year {
+        text-align: left;
+        /* Ensures the year is left-aligned */
+    }
+
+    .timeline-info {
+        text-align: left;
+        /* Ensures the info text is left-aligned */
+        padding-top: 0;
+        /* Remove top padding to bring text closer */
+    }
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    /* Positions the button 20px from the top */
+    left: 20px;
+    /* Positions the button 20px from the left */
+    background-color: #ffd700;
+    /* Current yellow color */
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #e6c200;
+    /* A slightly darker yellow for hover */
+    /* Or a different yellow shade like: #f0c500 or #ccae00 */
+}

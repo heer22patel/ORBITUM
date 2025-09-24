@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Voyages - Cosmic Destinations and Missions</title>
+
+    <meta name="description"
+        content="Explore celestial destinations and deep-space missions with Stellar Voyages. Discover mission statuses, overviews, and plan your cosmic adventure today.">
+    <meta name="keywords"
+        content="space travel, cosmic destinations, space missions, NASA, exoplanets, Mars, Moon, space tourism">
+    <meta name="author" content="Stellar Voyages">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Stellar Voyages - Cosmic Destinations">
+    <meta property="og:description"
+        content="Explore celestial destinations and deep-space missions with Stellar Voyages.">
+    <meta property="og:image" content="https://yourwebsite.com/images/logo-og.png">
+    <meta property="og:url" content="https://yourwebsite.com/destinations.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="destinations.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header" id="main-navbar">
+        <div class="header__container">
+            <a href="#" class="header__logo">
+                <img src="logo 4.png" height="80px" width="90px" alt="Company Logo">
+            </a>
+            <nav class="primary-nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">HOME</a></li>
+                    <li class="nav__item"><a href="destinations.html" class="nav__link">DESTINATIONS</a></li>
+                    <li class="nav__item"><a href="missions.html" class="nav__link">MISSIONS</a></li>
+                    <li class="nav__item"><a href="shop.html" class="nav__link">SHOP</a></li>
+                    <li class="nav__item"><a href="login.html" class="nav__link">LOGIN/SIGNUP</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger-menu" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="main2">
+        <p>This destination page is your guide to exploring celestial nodes. Just select a node to get an in-depth look
+            at its mission, including its current status, a full overview, and the mission's end date. It provides
+            everything you need to plan your cosmic adventures and discover more about the universe you're exploring.
+        </p>
+    </div>
+
+    <main class="galactic-map-container">
+        <svg id="connection-lines-svg" class="connection-lines"></svg>
+        <div class="destination-node" id="node-moon-1" data-id="moon-1" data-name="Moon: Lunar Outpost"
+            data-overview="Our primary lunar base, a critical hub for deep-space missions and resource extraction."
+            data-image="moon2.png" data-status="Active" data-mission-end="Ongoing"><span class="label">Moon: Lunar
+                Outpost</span></div>
+        <div class="destination-node" id="node-mars-1" data-id="mars-1" data-name="Mars: Red Frontier"
+            data-overview="Explore the canyons & ancient riverbeds of the Red Planet." data-image="redfrontier.png"
+            data-status="Upcoming" data-mission-end="TBD"><span class="label">Mars: Red Frontier</span></div>
+        <div class="destination-node" id="node-tess" data-id="tess-mission" data-name="TESS Mission"
+            data-overview="A powerful satellite designed to survey the brightest stars in the solar neighborhood for transiting exoplanets."
+            data-image="tess2.png" data-status="Ongoing" data-mission-end="Ongoing"><span class="label">TESS
+                Mission</span></div>
+        <div class="destination-node" id="node-moon-2" data-id="moon-2" data-name="Moon: Research Complex"
+            data-overview="Cutting-edge scientific research and zero-gravity manufacturing facility."
+            data-image="moonresearch.png" data-status="Active" data-mission-end="2050"><span class="label">Moon:
+                Research Complex</span></div>
+        <div class="destination-node" id="node-mars-2" data-id="mars-2" data-name="Mars: Olympus Ascent"
+            data-overview="The challenging ascent to the summit of Olympus Mons, the solar system's largest volcano."
+            data-image="marsolympus.png" data-status="Planned" data-mission-end="TBD"><span class="label">Mars: Olympus
+                Ascent</span></div>
+        <div class="destination-node" id="node-europa" data-id="europa" data-name="Europa: Water Discovery"
+            data-overview="Beneath its icy shell, Europa holds a vast ocean, a prime target in the search for extraterrestrial life."
+            data-image="europawater.png" data-status="Upcoming" data-mission-end="TBD"><span class="label">Europa: Water
+                Discovery</span></div>
+        <div class="destination-node" id="node-titan" data-id="titan" data-name="Titan: Methane Seas"
+            data-overview="Explore Saturn's largest moon, a world of hydrocarbon lakes and a dense, hazy atmosphere."
+            data-image="titan.png" data-status="Active" data-mission-end="2045"><span class="label">Titan: Methane
+                Seas</span></div>
+        <div class="destination-node" id="node-andromeda" data-id="andromeda" data-name="Andromeda Nebula Tours"
+            data-overview="Experience the breathtaking scale of the Andromeda galaxy, billions of light-years away."
+            data-image="andromeda.png" data-status="Planned" data-mission-end="N/A"><span class="label">Andromeda Nebula
+                Tours</span></div>
+        <div class="destination-node" id="node-kepler" data-id="kepler" data-name="Exoplanet Kepler-186f"
+            data-overview="Journey to the first Earth-size exoplanet discovered in the habitable zone of another star."
+            data-image="exoplanet.png" data-status="Conceptual" data-mission-end="N/A"><span class="label">Exoplanet
+                Kepler-186f</span></div>
+        <div class="destination-node" id="node-outpost-a" data-id="outpost-a" data-name="Deep Space Outpost A"
+            data-overview="A remote research station on the edge of the solar system." data-image="deep space.png"
+            data-status="Active" data-mission-end="Ongoing"><span class="label">Deep Space Outpost A</span></div>
+        <div class="destination-node" id="node-colony-x" data-id="colony-x" data-name="Asteroid Colony X"
+            data-overview="A self-sustaining habitat within the asteroid belt, dedicated to resource extraction."
+            data-image="asteriodcolo.png" data-status="Active" data-mission-end="Ongoing"><span class="label">Asteroid
+                Colony X</span></div>
+        <div class="destination-node" id="node-gas-giant-station" data-id="gas-giant-station"
+            data-name="Gas Giant Station"
+            data-overview="Orbiting a massive gas giant, studying its turbulent atmosphere and moons."
+            data-image="gas.png" data-status="Operational" data-mission-end="Ongoing"><span class="label">Gas Giant
+                Station</span></div>
+        <div class="destination-node" id="node-nebula-gate" data-id="nebula-gate" data-name="Nebula Gateway"
+            data-overview="A jump point for interstellar travel, surrounded by vibrant cosmic dust."
+            data-image="nebula.png" data-status="Under Construction" data-mission-end="2060"><span class="label">Nebula
+                Gateway</span></div>
+        <div class="destination-node" id="node-dark-matter-lab" data-id="dark-matter-lab" data-name="Dark Matter Lab"
+            data-overview="An experimental station studying exotic physics beyond our galaxy."
+            data-image="darkmatter.png" data-status="Researching" data-mission-end="TBD"><span class="label">Dark Matter
+                Lab</span></div>
+        <div class="destination-node" id="node-nova-prime" data-id="nova-prime" data-name="Nova Prime City"
+            data-overview="A bustling intergalactic port and commercial hub." data-image="nova.png"
+            data-status="Established" data-mission-end="N/A"><span class="label">Nova Prime City</span></div>
+        <div class="destination-node" id="node-asteroid-mine" data-id="asteroid-mine" data-name="Asteroid Mine 7"
+            data-overview="Automated mining facility extracting rare minerals from a large asteroid."
+            data-image="asteroid.png" data-status="Active" data-mission-end="Ongoing"><span class="label">Asteroid Mine
+                7</span></div>
+        <div class="destination-node" id="node-comet-station" data-id="comet-station" data-name="Comet Observation Post"
+            data-overview="Observing cometary bodies, providing early warnings and research data."
+            data-image="commet.png" data-status="Operational" data-mission-end="Ongoing"><span class="label">Comet
+                Observation Post</span></div>
+        <div id="info-panel" class="info-panel">
+            <div class="panel-image-header">
+                <img id="panel-header-image"
+                    src="https://via.placeholder.com/600x400/0A111F/00BFFF?text=Welcome+Voyager"
+                    alt="Welcome to Stellar Voyages">
+                <span id="panel-status-tag" class="status-tag">STATUS: IDLE</span>
+            </div>
+            <div class="panel-content">
+                <h2 id="panel-title">Your Journey Begins...</h2>
+                <p id="panel-overview">Click on any star node to explore cosmic destinations and discover our deep-space
+                    missions.</p>
+                <div class="mission-details">
+                    <p>Status: <span id="mission-status-detail">Ready</span></p>
+                    <p>Mission End: <span id="mission-end-detail">Infinite</span></p>
+                </div>
+                <button id="learn-more-btn">Begin Exploration</button>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column footer-logo-column">
+                    <h2 class="footer-brand">ORBITUM</h2>
+                    <p class="footer-tagline">Journey Beyond the Stars</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="missions.html">Missions</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">Indoor Collection</a></li>
+                        <li><a href="#">Outdoor Collection</a></li>
+                        <li><a href="#">Starter Collection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-link facebook-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link twitter-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link instagram-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="copyright">
+                <p>&copy; 2024 SpaceVoyage. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+    <script src="SCRIPT2.JS"></script>
+</body>
+
+</html>

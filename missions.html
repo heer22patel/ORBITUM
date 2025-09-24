@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Adventures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="missions.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header" id="main-navbar">
+        <div class="header__container">
+            <a href="#" class="header__logo">
+                <img src="logo 4.png" height="80px" width="90px" alt="Company Logo">
+            </a>
+            <nav class="primary-nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">HOME</a></li>
+                    <li class="nav__item"><a href="destinations.html" class="nav__link">DESTINATIONS</a></li>
+                    <li class="nav__item"><a href="missions.html" class="nav__link">MISSIONS</a></li>
+                    <li class="nav__item"><a href="shop.html" class="nav__link">SHOP</a></li>
+                    <li class="nav__item"><a href="login.html" class="nav__link">LOGIN/SIGNUP</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger-menu" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+    <div class="main2">
+        <h1>All Space Missions</h1>
+        <p>Explore the full catalog of past, present, and future endeavors pushing the boundaries of human
+            knowledge exploration. Filter by status, destination, and organization.</p>
+    </div>
+
+    <main class="missions-content">
+        <section class="missions-section">
+            <h2>Current & Upcoming Missions</h2>
+            <div class="mission-card-container">
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="mars2bg.png" alt="Mars rover and sample canister">
+                    </div>
+                    <div class="card-status active-status">Active</div>
+                    <h3>Mars Sample Return</h3>
+                    <p>A mission to collect and bring back rock and soil samples from the surface of Mars to Earth
+                        for scientific study.</p>
+                    <div class="mission-meta">
+                        <span>Mission: Oct 2033</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="europaclipper.png" alt="Europa Clipper spacecraft orbiting Jupiter">
+                    </div>
+                    <div class="card-status upcoming-status">Upcoming</div>
+                    <h3>Europa Clipper Launch</h3>
+                    <p>A dedicated mission to investigate whether Jupiter's icy moon, Europa, has the potential for
+                        life.</p>
+                    <div class="mission-meta">
+                        <span>Launch: Oct 2024</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="james.png" alt="James Webb Space Telescope">
+                    </div>
+                    <div class="card-status active-status">Active</div>
+                    <h3>James Webb Space Telescope</h3>
+                    <p>A revolutionary observatory designed to look deeper into the cosmos than ever before,
+                        studying early galaxies.</p>
+                    <div class="mission-meta">
+                        <span>Mission: Dec 2021</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="lucy.png" alt="Lucy spacecraft">
+                    </div>
+                    <div class="card-status active-status">Active</div>
+                    <h3>Lucy Mission</h3>
+                    <p>Exploring Jupiter's Trojan asteroids, a diverse population of primitive asteroids thought to
+                        be remnants from the solar system's formation.</p>
+                    <div class="mission-meta">
+                        <span>Mission: Oct 2021</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="psyche.png" alt="Psyche spacecraft">
+                    </div>
+                    <div class="card-status upcoming-status">Upcoming</div>
+                    <h3>Psyche Mission</h3>
+                    <p>A journey to a metal-rich asteroid, Psyche, to explore a potential building block of rocky
+                        planets.</p>
+                    <div class="mission-meta">
+                        <span>Launch: Oct 2023</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="lunar.png" alt="Lunar Gateway orbiting the Moon">
+                    </div>
+                    <div class="card-status upcoming-status">Upcoming</div>
+                    <h3>Lunar Gateway</h3>
+                    <p>Construction of a small lunar-orbiting space station to serve as a multi-purpose outpost for
+                        future missions to the Moon and Mars.</p>
+                    <div class="mission-meta">
+                        <span>Launch: 2024+</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="juno.png" alt="Juno spacecraft">
+                    </div>
+                    <div class="card-status active-status">Active</div>
+                    <h3>Juno Mission</h3>
+                    <p>An ongoing mission orbiting Jupiter to study its composition, gravity field, magnetic field,
+                        and polar magnetosphere.</p>
+                    <div class="mission-meta">
+                        <span>Status: Ongoing</span>
+                        <span>Mission End: Ongoing</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="marscuriosity.png" alt="Curiosity rover on Mars">
+                    </div>
+                    <div class="card-status active-status">Active</div>
+                    <h3>Mars Curiosity Rover</h3>
+                    <p>A rover sent to explore Gale Crater on Mars to determine if Mars ever had the right
+                        environmental conditions to support small microbial life.</p>
+                    <div class="mission-meta">
+                        <span>Status: Ongoing</span>
+                        <span>Mission End: Ongoing</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="marsrover.png" alt="Perseverance rover on Mars">
+                    </div>
+                    <div class="card-status active-status">Active</div>
+                    <h3>Perseverance Mars Rover</h3>
+                    <p>The newest Mars rover, exploring the Jezero Crater in search of signs of ancient life and
+                        collecting rock samples.</p>
+                    <div class="mission-meta">
+                        <span>Status: Ongoing</span>
+                        <span>Mission End: Ongoing</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="chandra.png" alt="Chandra X-ray Observatory">
+                    </div>
+                    <div class="card-status active-status">Active</div>
+                    <h3>Chandra X-ray Observatory</h3>
+                    <p>An active space telescope designed to detect X-ray emissions from the hottest and most
+                        energetic regions of the universe.</p>
+                    <div class="mission-meta">
+                        <span>Status: Ongoing</span>
+                        <span>Mission End: Ongoing</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="tess.png" alt="TESS satellite">
+                    </div>
+                    <div class="card-status active-status">Active</div>
+                    <h3>TESS Mission</h3>
+                    <p>A powerful satellite designed to survey the brightest stars in the solar neighborhood for
+                        transiting exoplanets.</p>
+                    <div class="mission-meta">
+                        <span>Status: Ongoing</span>
+                        <span>Mission End: Ongoing</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="missions-section">
+            <h2>Completed Missions</h2>
+            <div class="mission-card-container">
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="m2.png" alt="Hubble Space Telescope in orbit">
+                    </div>
+                    <div class="card-status completed-status">Completed</div>
+                    <h3>Hubble Legacy Grand Project</h3>
+                    <p>A series of missions that successfully deployed and serviced the advanced Hubble Space
+                        Telescope network.</p>
+                    <div class="mission-meta">
+                        <span>Status: Completed</span>
+                        <span>Mission End: 2021</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">View Results</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="rosetta.png" alt="Rosetta spacecraft near Comet 67P">
+                    </div>
+                    <div class="card-status completed-status">Completed</div>
+                    <h3>Rosetta Comet Rendezvous</h3>
+                    <p>The first mission to rendezvous with, and land on, a comet, providing unprecedented data on
+                        cometary composition.</p>
+                    <div class="mission-meta">
+                        <span>Status: Completed</span>
+                        <span>Mission End: 2016</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">View Results</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="casina.png" alt="Cassini spacecraft near Saturn">
+                    </div>
+                    <div class="card-status completed-status">Completed</div>
+                    <h3>Cassini-Huygens</h3>
+                    <p>An orbiter that studied Saturn and its system for nearly 20 years, making discoveries about
+                        its rings and moons.</p>
+                    <div class="mission-meta">
+                        <span>Status: Completed</span>
+                        <span>Mission End: 2017</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">View Results</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="voyage.png" alt="Voyager spacecraft in space">
+                    </div>
+                    <div class="card-status completed-status">Completed</div>
+                    <h3>Voyager 1 and 2</h3>
+                    <p>Twin probes launched in the 1970s to explore the outer solar system, now in interstellar
+                        space, sending back data about the heliosphere.</p>
+                    <div class="mission-meta">
+                        <span>Status: Completed</span>
+                        <span>Mission End: Ongoing</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">View Results</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="newhori.png" alt="New Horizons spacecraft near Pluto">
+                    </div>
+                    <div class="card-status completed-status">Completed</div>
+                    <h3>New Horizons</h3>
+                    <p>The first mission to make a close flyby of Pluto and its moons, providing detailed images and
+                        data on the dwarf planet.</p>
+                    <div class="mission-meta">
+                        <span>Status: Completed</span>
+                        <span>Mission End: Ongoing</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">View Results</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="spirit.png" alt="Mars rovers Spirit and Opportunity">
+                    </div>
+                    <div class="card-status completed-status">Completed</div>
+                    <h3>Spirit and Opportunity</h3>
+                    <p>Twin rovers that landed on Mars in 2004, providing extensive evidence that water once flowed
+                        on the planet's surface.</p>
+                    <div class="mission-meta">
+                        <span>Status: Completed</span>
+                        <span>Mission End: 2010/2018</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">View Results</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="osiris.png" alt="OSIRIS-REx spacecraft">
+                    </div>
+                    <div class="card-status completed-status">Completed</div>
+                    <h3>OSIRIS-REx</h3>
+                    <p>Successfully returned a sample from the asteroid Bennu, providing a glimpse into the early
+                        solar system's materials.</p>
+                    <div class="mission-meta">
+                        <span>Status: Completed</span>
+                        <span>Mission End: 2023</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">View Results</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="dawn.png" alt="Dawn spacecraft orbiting Vesta">
+                    </div>
+                    <div class="card-status completed-status">Completed</div>
+                    <h3>Dawn Mission</h3>
+                    <p>The first mission to orbit two different celestial bodies—the giant asteroid Vesta and the
+                        dwarf planet Ceres—in the main asteroid belt.</p>
+                    <div class="mission-meta">
+                        <span>Status: Completed</span>
+                        <span>Mission End: 2018</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">View Results</a>
+                    </div>
+                </div>
+                <div class="mission-card">
+                    <div class="card-image-wrapper">
+                        <img src="insight.png" alt="InSight lander on Mars">
+                    </div>
+                    <div class="card-status completed-status">Completed</div>
+                    <h3>InSight Mars Lander</h3>
+                    <p>A mission to study the deep interior of Mars, using seismic instruments to detect Marsquakes
+                        and meteoroid impacts.</p>
+                    <div class="mission-meta">
+                        <span>Status: Completed</span>
+                        <span>Mission End: 2022</span>
+                    </div>
+                    <div class="card-cta">
+                        <a href="#" class="btn btn-primary">View Results</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column footer-logo-column">
+                <h2 class="footer-brand">ORBITUM</h2>
+                <p class="footer-tagline">Journey Beyond the Stars</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="missions.html">Missions</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Kits</h3>
+                <ul>
+                    <li><a href="#">Indoor Collection</a></li>
+                    <li><a href="#">Outdoor Collection</a></li>
+                    <li><a href="#">Starter Collection</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-link facebook-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link twitter-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link instagram-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="copyright">
+            <p>&copy; 2024 SpaceVoyage. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
